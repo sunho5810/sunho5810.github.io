@@ -19,7 +19,7 @@ img,fieldset{border:0;vertical-align:middle;}
 ul,ol{list-style:none;}
 em,address{font-style:normal;}
 table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
-a{text-decoration:none;color:#000;vertical-align:middle;} 
+a{text-decoration:none;color:#fff;vertical-align:middle;} 
 a:hover,a:active,a:focus{text-decoration:none;}
 .blind{overflow:hidden;position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;border:0;padding:0;}
 caption.blind{position:static;}
@@ -35,3 +35,11 @@ caption.blind{position:static;}
         font-size:12px;
     }
 }
+
+.fz16{font-size: 1rem;}
+.fz18{font-size: 18px;}
+.fz20{font-size: 20px;}
+.fz22{font-size: 22px;}
+.fz24{font-size: 24px;}
+.fz26{font-size: 26px;}
+.fz28{font-size: 28px;}

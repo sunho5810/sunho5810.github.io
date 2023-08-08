@@ -15,23 +15,33 @@ function typing(){
     // 한글자씩 이어준다. 
     typingIdx++; 
   } else{ 
-    console.log("end");
     //끝나면 반복종료
     typingBool = false;
     clearInterval(tyInt);
-    setTimeout(() => {
-      $(".introWrapper").fadeOut(600);
-    }, 1000, $("body").removeClass("scrollDisable"));
   } 
 }  
 
-$(function(){
+const closeNoticePopup = function(obj){
+  console.log("obj", obj);
+  $(obj).fadeOut(400);
+  $(".introBox").show();
+
   setTimeout(() => {
-      if(typingBool==false){ 
+    if(typingBool==false){ 
       // 타이핑이 진행되지 않았다면 
       typingBool=true;
       tyInt = setInterval(typing,150); // 반복동작 
     }
   }, 1000);
-  
+
+  setTimeout(() => {
+    $(".introWrapper").fadeOut(600);
+  }, 2000, $("body").removeClass("scrollDisable"));
+}
+
+$(window).on("scroll", function(){
+  var scTop = $(window).scrollTop();
+  var htmlHeight = $("body").height() - $(window).height();
+
+  $(".scrollBar").css("width", `${(scTop / htmlHeight) * 100}%`)
 });

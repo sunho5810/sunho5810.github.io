@@ -12,9 +12,31 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="/res/js/script.js"></script>
 </head>
-<body class="scrollDisable">
-  <div class="introWrapper">
-    <div class="ft--player effect--typing introBox"></div>
+<body> <!-- class="scrollDisable" -->
+  <div class="introWrapper" style="display: none;">
+    <div class="noticePopup">
+      <p class="noticePopup__p">본 페이지는 포트폴리오 사이트입니다.</p>
+      <a href="javascript:closeNoticePopup($('.noticePopup'));" class="noticeCloseBtn btn">확인</a>
+    </div>
+    <div class="ft--player introBox"></div>
+  </div>
+
+  <header class="header">
+    <div class="inner inner--header">
+      <h1 class="logo ft--player"><a href="javascript:void(0);" class="logo__link">5810</a></h1>
+      <div class="menuBtn">
+        <span class="menuBtn__line menuBtn__line--01"></span>
+        <span class="menuBtn__line menuBtn__line--02"></span>
+        <span class="menuBtn__line menuBtn__line--03"></span>
+      </div>
+    </div>
+    <span class="scrollBar"></span>
+  </header>
+
+  <div class="wrap">
+    <section class="section sec01"></section>
+    <section class="section sec02"></section>
+    <section class="section sec03"></section>
   </div>
 </body>
 </html>
