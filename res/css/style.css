@@ -12,7 +12,7 @@ body{scrollbar-width: none; /* 파폭 */}
 html, body{background-color: var(--bg-color);}
 .ft--player{font-family: "PLAYER", sans-serif; color: var(--font-color-white);}
 .scrollDisable{overflow: hidden; width: 100%; height: 100vh;}
-.inner{width: 100%; height: 100%;padding: 0 40px; box-sizing: border-box;}
+.inner{width: 100%; height: 100%; padding: 0 40px; box-sizing: border-box;}
 
 .introWrapper{display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: var(--bg-color);}
 .noticePopup{display: flex; flex-direction: column;}
@@ -26,7 +26,7 @@ html, body{background-color: var(--bg-color);}
 .inner--header{display: flex; justify-content: space-between; align-items: center;}
 .logo__link{font-size: 2.5rem; line-height: 1; letter-spacing: 2px; transition: color .2s linear;}
 .logo__link:hover{color: var(--point-color);}
-.menuBtn{display: flex; justify-content: space-between; align-items: center; flex-direction: column; width: 30px; height: 24px;}
+.menuBtn{display: flex; justify-content: space-between; align-items: center; flex-direction: column; width: 1.875rem; height: 1.5rem; /* padding: 0.5rem; */}
 .menuBtn__line{display: inline-block; width: 100%; height: 2px; background-color: #fff; transition: all .2s ease;}
 .menuBtn__line--02{transform: translateX(-30%);}
 .menuBtn:hover .menuBtn__line--02{transform: translateX(0%); background-color: var(--point-color);}
@@ -38,3 +38,11 @@ html, body{background-color: var(--bg-color);}
 .sec01{background: #000;}
 .sec02{background: #fff;}
 .sec03{background: #ddd;}
+
+@media screen and (max-width: 1200px) {
+  :root{
+    --header-height: 60px;
+  }
+  .introBox{font-size: 11.25rem;}
+  .inner{padding: 0 20px;}
+}
