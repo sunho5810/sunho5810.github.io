@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'PLAYER';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PLAYER'), local('PLAYER'),
+  url(/res/fonts/PLAYER.ttf)
+}
