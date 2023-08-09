@@ -1,6 +1,85 @@
+const productObj = [
+  {
+    title: "아이유 참 좋다",
+    duration: "1993.05.16 ~",
+    siteLink: "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%9C%A0",
+    type: "test",
+    contribution: ["test"],
+    special: "test",
+    github: [{is: false, link: "javascript:void(0);"}],
+    thumbnail: "https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg"
+  },
+  {
+    title: "스마트스토어[PC]",
+    duration: "2022.10 ~ 2022.12",
+    siteLink: "https://www.smartchoice.or.kr/",
+    type: "노스글로벌 재직 당시 PC 리뉴얼",
+    contribution: ["퍼블리싱 100%"],
+    special: "접근성 뱃지 취득",
+    github: [{is: false, link: "javascript:void(0);"}],
+    thumbnail: "/res/img/product_thumb/smartchoice_screenshot.png"
+  },
+  {
+    title: "똥피하기 게임",
+    duration: "2020.10.22 ~ 2020.10.25",
+    siteLink: "https://sunho5810.github.io/avoidPoopGame/",
+    type: "개인 프로젝트",
+    contribution: ["전체 100%"],
+    special: "Vanilla JS로 제작",
+    github: [{is: true, link: "https://github.com/sunho5810/avoidPoopGame"}],
+    thumbnail: "/res/img/product_thumb/avoidPoop_screenshot.png"
+  }
+]
+
+const productFunc = function(obj){
+  var str = "";
+
+  str += `<li class="prodItem">`;
+  str += `  <div class="prodItem__info">`;
+  str += `    <div class="prodTitWrap">`;
+  str += `      <a href="${obj.siteLink}" class="prodItem__link" title="${obj.title} 프로젝트 링크 가기" target="_blank">${obj.title}</a>`;
+  str += `      <p class="duration">${obj.duration}</p>`;
+  str += `    </div>`;
+  str += `    <dl class="prodItem__dl">`;
+  str += `      <dt class="prodItem__dt">프로젝트 종류</dt>`;
+  str += `      <dd class="prodItem__dd">${obj.type}</dd>`;
+  str += `    </dl>`;
+  str += `    <dl class="prodItem__dl">`;
+  str += `      <dt class="prodItem__dt">기여도</dt>`;
+  str += `      <dd class="prodItem__dd">`;
+  for(var i = 0; i < obj.contribution.length; i++){
+    str += `<span class="badge">${obj.contribution[i]}</span>`
+  }
+  str += `      </dd>`;
+  str += `    </dl>`;
+  str += `    <dl class="prodItem__dl">`;
+  str += `      <dt class="prodItem__dt">특이사항</dt>`;
+  str += `      <dd class="prodItem__dd">${obj.special}</dd>`;
+  str += `    </dl>`;
+  if(obj.github[0].is){
+    str += `    <div class="prodItem__refBox">`;
+    str += `      <a href="${obj.github[0].link}" title="${obj.title} 깃허브 링크 바로가기" target="_blank" class="refIcon refIcon--github"></a>`;
+    str += `    </div>`;
+  }
+  str += `  </div>`;
+  str += `  <div class="prodItem__thumb" style="background-image: url(${obj.thumbnail})" onclick="openThumbPopup('${obj.thumbnail}');"></div>`;
+  str += `</li>`;
+  
+  $(".productList").append(str);
+}
+
 $(function(){
   windowResizeFunc();
-})
+
+  // $(".productThumb__img").attr("src", productObj[0].thumbnail);
+  $(".productThumb").css("background-image", `url(${productObj[0].thumbnail})`);
+
+  for(var i = 0; i < productObj.length; i++){
+    productFunc(productObj[i]);
+  }
+
+  
+});
 
 var typingBool = false; 
 var typingIdx = 0; 
@@ -49,35 +128,38 @@ $(window).on("scroll", function(){
 
   $(".scrollBar").css("width", `${(scTop / htmlHeight) * 100}%`);
 
-  let $productTumb = $(".productTumb").not(".productTumb.popup");
+  let $productThumb = $(".productThumb").not(".productThumb.popup");
 
   if((scTop + $(".header").height()) >= $(".productWrap").offset().top - $(".header").height()){
-    $productTumb.addClass("fixed");
-    $productTumb.removeClass("bottom");
+    $productThumb.addClass("fixed");
+    $productThumb.removeClass("bottom");
   } else {
-    $productTumb.removeClass("fixed");
-    $productTumb.removeClass("bottom");
+    $productThumb.removeClass("fixed");
+    $productThumb.removeClass("bottom");
   }
 
   if(scTop >= $(".sec02").offset().top + ($(".sec02").height() - $(window).height() + $(".header").height())){
-    $productTumb.removeClass("fixed");
-    $productTumb.addClass("bottom");
+    $productThumb.removeClass("fixed");
+    $productThumb.addClass("bottom");
   }
 });
 
 $(window).on("resize", windowResizeFunc = function(){
   if($(window).innerWidth() <= 1200){
-    $(".productTumb").addClass("popup");
+    $(".productThumb").addClass("popup");
   } else {
-    $(".productTumb").removeClass("popup");
+    $(".productThumb").removeClass("popup");
   }
 });
 
-const openThumbPopup = function(popIdx){
+const openThumbPopup = function(imgsrc){
   if($(window).innerWidth() <= 1200){
-    $(".productTumb.popup").addClass("on");
+    $(".productThumb.popup").addClass("on");
+    $(".productThumb").css("background-image", `url(${imgsrc})`)
     $(".dim").addClass("on");
     $("body").addClass("scrollDisable");
+  } else {
+    $(".productThumb").css("background-image", `url(${imgsrc})`);
   }
 }
 
