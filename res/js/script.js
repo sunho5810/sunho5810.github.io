@@ -74,10 +74,11 @@ $(window).on("resize", windowResizeFunc = function(){
 });
 
 const openThumbPopup = function(popIdx){
-  console.log("openPopup");
-  $(".productTumb.popup").addClass("on");
-  $(".dim").addClass("on");
-  $("body").addClass("scrollDisable");
+  if($(window).innerWidth() <= 1200){
+    $(".productTumb.popup").addClass("on");
+    $(".dim").addClass("on");
+    $("body").addClass("scrollDisable");
+  }
 }
 
 const closeTumbPopup = function(obj){
