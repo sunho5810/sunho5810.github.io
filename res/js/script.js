@@ -137,7 +137,7 @@ $(window).on("scroll", function(){
 
   let $productThumb = $(".productThumb").not(".productThumb.popup");
 
-  if((scTop + $(".header").height()) >= $(".productWrap").offset().top - $(".header").height()){
+  if((scTop + $(".header").height()) >= $(".productWrap").offset().top - $(".header").height() + 80){
     $productThumb.addClass("fixed");
     $productThumb.removeClass("bottom");
   } else {

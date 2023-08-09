@@ -86,9 +86,9 @@ html, body{background-color: var(--bg-color);}
   }
   .introBox{font-size: 11.25rem;}
   .inner{padding: 0 var(--inner-sidePadding);}
-  .productWrap{min-height: auto; padding: 0 var(--inner-sidePadding);}
+  .productWrap{min-height: auto;}
   .productThumb{display: none;}
-  .productList{width: 100%;}
+  .productList{width: 100%; padding-right: 0;}
   .prodItem{width: calc(33% - 2rem);}
   .prodItem__thumb::before{display: block; top: unset; left: unset; bottom: 1rem; right: 1rem; width: 2.25rem; height: 2.25rem; background-color: transparent; filter: drop-shadow(1px 1px 3px #000);}
   .productThumb.popup{display: none; position: fixed; top: calc(50% + 1.125rem); left: 50%; transform: translate(-50%, -50%); z-index: 105; width: 80%; height: auto; padding-top: 85%; border-radius: 2rem;}
