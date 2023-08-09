@@ -43,5 +43,18 @@ $(window).on("scroll", function(){
   var scTop = $(window).scrollTop();
   var htmlHeight = $("body").height() - $(window).height();
 
-  $(".scrollBar").css("width", `${(scTop / htmlHeight) * 100}%`)
+  $(".scrollBar").css("width", `${(scTop / htmlHeight) * 100}%`);
+  console.log(`${scTop + $(".header").height()} / ${$(".productWrap").offset().top}`);
+  if((scTop + $(".header").height()) >= $(".productWrap").offset().top - $(".header").height()){
+    $(".productTumb").addClass("fixed");
+    $(".productTumb").removeClass("bottom");
+  } else {
+    $(".productTumb").removeClass("fixed");
+    $(".productTumb").removeClass("bottom");
+  }
+
+  if(scTop >= $(".sec02").offset().top + ($(".sec02").height() - $(window).height() + $(".header").height())){
+    $(".productTumb").removeClass("fixed");
+    $(".productTumb").addClass("bottom");
+  }
 });

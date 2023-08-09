@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5810</title>
+  <title>5810 PORTFOLIO</title>
 
   <link rel="stylesheet" href="/res/fonts/fonts.css">
   <link rel="stylesheet" href="/res/css/reset.css">
@@ -13,9 +13,9 @@
   <script src="/res/js/script.js"></script>
 </head>
 <body> <!-- class="scrollDisable" -->
-  <div class="introWrapper">
+  <div class="introWrapper" style="display: none;">
     <div class="noticePopup">
-      <p class="noticePopup__p">본 페이지는 포트폴리오 사이트입니다.</p>
+      <p class="noticePopup__p">본 페이지는 개인 포트폴리오 사이트이며, 상업적인 목적이 없음을 밝힙니다.</p>
       <a href="javascript:closeNoticePopup($('.noticePopup'));" class="noticeCloseBtn btn">확인</a>
     </div>
     <div class="ft--player introBox"></div>
@@ -23,7 +23,7 @@
 
   <header class="header">
     <div class="inner inner--header">
-      <h1 class="logo ft--player"><a href="javascript:void(0);" class="logo__link">5810</a></h1>
+      <h1 class="logo ft--player"><a href="/" class="logo__link">5810</a></h1>
       <a href="javascript:void(0);" class="menuBtn">
         <span class="menuBtn__line menuBtn__line--01"></span>
         <span class="menuBtn__line menuBtn__line--02"></span>
@@ -35,7 +35,50 @@
 
   <div class="wrap">
     <section class="section sec01"></section>
-    <section class="section sec02"></section>
+    <section class="section sec02">
+      <div class="subTitBox">
+        <div class="inner">
+          <h2 class="subTit">PRODUCTS</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ratione placeat praesentium iure similique? Labore inventore provident cum nesciunt nam officiis molestias? Laborum repellendus neque quas est. Tempore, nesciunt id.</p>
+        </div>
+      </div>
+
+      <div class="productWrap">
+        <ul class="productList">
+          <li class="prodItem">
+            <div class="prodItem__tumb"></div>
+            <div class="prodItem__info">
+              <dl class="prodItem__dl">
+                <dt class="prodItem__dt">프로젝트 명</dt>
+                <dd class="prodItem__dd"></dd>
+              </dl>
+              <dl class="prodItem__dl">
+                <dt class="prodItem__dt">프로젝트 종류</dt>
+                <dd class="prodItem__dd"></dd>
+              </dl>
+              <dl class="prodItem__dl">
+                <dt class="prodItem__dt">제작기간</dt>
+                <dd class="prodItem__dd"></dd>
+              </dl>
+              <dl class="prodItem__dl">
+                <dt class="prodItem__dt">기여도</dt>
+                <dd class="prodItem__dd"></dd>
+              </dl>
+              <dl class="prodItem__dl">
+                <dt class="prodItem__dt">코멘트</dt>
+                <dd class="prodItem__dd ellipsis--3"></dd>
+              </dl>
+              <div class="prodItem__btns">
+                <a href="javascript:void(0);" class="btn prodItem__btn prodItem__btn--detail">자세히 보기</a>
+                <a href="javascript:void(0);" class="btn prodItem__btn prodItem__btn--tumb">썸네일 보기</a>
+                <a href="javascript:void(0);" class="btn prodItem__btn prodItem__btn--goSite">사이트 보기</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="productTumb"></div>
+      </div>
+    </section>
     <section class="section sec03"></section>
   </div>
 </body>
