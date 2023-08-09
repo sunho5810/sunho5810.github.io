@@ -13,14 +13,14 @@ const productObj = [
     title: "스마트스토어[PC]",
     duration: "2022.10 ~ 2022.12",
     siteLink: "https://www.smartchoice.or.kr/",
-    type: "노스글로벌 재직 당시 PC 리뉴얼",
+    type: "노스글로벌 재직 당시 사이트 PC 디자인 리뉴얼",
     contribution: ["퍼블리싱 100%"],
     special: "접근성 뱃지 취득",
     github: [{is: false, link: "javascript:void(0);"}],
     thumbnail: "/res/img/product_thumb/smartchoice_screenshot.png"
   },
   {
-    title: "똥피하기 게임",
+    title: "똥피하기 게임[PC]",
     duration: "2020.10.22 ~ 2020.10.25",
     siteLink: "https://sunho5810.github.io/avoidPoopGame/",
     type: "개인 프로젝트",
@@ -37,7 +37,10 @@ const productFunc = function(obj){
   str += `<li class="prodItem">`;
   str += `  <div class="prodItem__info">`;
   str += `    <div class="prodTitWrap">`;
-  str += `      <a href="${obj.siteLink}" class="prodItem__link" title="${obj.title} 프로젝트 링크 가기" target="_blank">${obj.title}</a>`;
+  str += `      <a href="${obj.siteLink}" class="prodItem__link" title="${obj.title} 프로젝트 링크 가기" target="_blank">`
+  str += `        <p class="prodItem__link__p">${obj.title}</p>`
+  str += `        <span class="prodItem__link__icon"></span>`
+  str += `      </a>`;
   str += `      <p class="duration">${obj.duration}</p>`;
   str += `    </div>`;
   str += `    <dl class="prodItem__dl">`;
@@ -62,7 +65,7 @@ const productFunc = function(obj){
     str += `    </div>`;
   }
   str += `  </div>`;
-  str += `  <div class="prodItem__thumb" style="background-image: url(${obj.thumbnail})" onclick="openThumbPopup('${obj.thumbnail}');"></div>`;
+  str += `  <div class="prodItem__thumb" style="background-image: url(${obj.thumbnail})" title="클릭 시 썸네일 보기" onclick="openThumbPopup('${obj.thumbnail}');"></div>`;
   str += `</li>`;
   
   $(".productList").append(str);
@@ -126,7 +129,7 @@ const closeNoticePopup = function(obj){
 
 $(window).on("scroll", function(){
   window.scroll({behavior: 'smooth'});
-  
+
   var scTop = $(window).scrollTop();
   var htmlHeight = $("body").height() - $(window).height();
 
