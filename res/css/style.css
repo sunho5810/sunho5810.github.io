@@ -44,7 +44,7 @@ html, body{background-color: var(--bg-color);}
 .sec02 .subTitBox *{color: var(--font-color-white);}
 .subTitBox .inner{height: auto;}
 .productWrap{position: relative; width: 100%; height: 300vh; margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
-.productTumb{position: absolute; top: 0; right: 0; width: 60%; height: calc(100vh - 80px); background: #fff;}
+.productTumb{position: absolute; top: 0; right: 0; width: 60%; height: calc(100vh - 80px); background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;}
 .productTumb.fixed{position: fixed; top: var(--header-height);}
 .productTumb.bottom{position: absolute; top: unset; bottom: 0;}
 .productList{width: 40%;}
