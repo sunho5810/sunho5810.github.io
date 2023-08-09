@@ -34,7 +34,7 @@ html, body{background-color: var(--bg-color);}
 .menuBtn:hover .menuBtn__line--02{transform: translateX(0%); background-color: var(--point-color);}
 
 
-.scrollBar{position: absolute; top: 100%; height: 300vh; left: 0; width: 0%; height: 2px; background: var(--point-color);}
+.scrollBar{position: absolute; top: 100%; left: 0; width: 0%; height: 2px; background: var(--point-color);}
 
 .section{width: 100%; height: 100vh; padding-top: var(--header-height); padding-bottom: 80px; box-sizing: border-box;}
 .sec01{background: #000;}
@@ -43,7 +43,7 @@ html, body{background-color: var(--bg-color);}
 
 .sec02 .subTitBox *{color: var(--font-color-white);}
 .subTitBox .inner{height: auto;}
-.productWrap{position: relative; width: 100%; margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
+.productWrap{position: relative; width: 100%; height: 300vh; margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
 .productTumb{position: absolute; top: 0; right: 0; width: 60%; height: calc(100vh - 80px); background: #fff;}
 .productTumb.fixed{position: fixed; top: var(--header-height);}
 .productTumb.bottom{position: absolute; top: unset; bottom: 0;}
