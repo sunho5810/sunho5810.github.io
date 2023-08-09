@@ -13,9 +13,9 @@ const productObj = [
     title: "스마트스토어[PC]",
     duration: "2022.10 ~ 2022.12",
     siteLink: "https://www.smartchoice.or.kr/",
-    type: "노스글로벌 재직 당시 사이트 PC 디자인 리뉴얼",
+    type: "노스글로벌 재직 중 사이트 PC 디자인 리뉴얼",
     contribution: ["퍼블리싱 100%"],
-    comment: "접근성 뱃지 취득",
+    comment: "접근성 마크 취득",
     github: [{is: false, link: "javascript:void(0);"}],
     thumbnail: "/res/img/product_thumb/smartchoice_screenshot.png"
   },
@@ -38,21 +38,40 @@ const productObj = [
     comment: "jquery ui의 mouseenter, mouseleave 이벤트를 이용하여 큐브 플립 구현",
     github: [{is: true, link: "https://github.com/sunho5810/cubeFlip"}],
     thumbnail: "/res/img/product_thumb/cubeFlip_screenshot.png"
-  }/* ,
-  {
-    title: "포트폴리오2020[PC]",
-    duration: "2020.10.17 ~ 2020.10.30",
-    siteLink: "https://sunho5810.github.io/cubeFlip/",
-    type: "개인 프로젝트",
-    contribution: ["전체 100%"],
-    comment: "2020년에 제작했던 포트폴리오",
-    github: [{is: true, link: "https://github.com/sunho5810/cubeFlip"}],
-    thumbnail: "/res/img/product_thumb/cubeFlip_screenshot.png"
-  } */
+  }
 ]
+
+
 
 const productFunc = function(obj){
   var str = "";
+
+/* 
+  <li class="prodItem">
+    <div class="prodItem__info">
+      <div class="prodTitWrap">
+        <a href="javascript:void(0);" class="prodItem__link" title="프로젝트 링크 가기" target="_blank">아이유</a>
+        <p class="duration">2022.07.14 ~ 2022.08.20</p>
+      </div>
+      <dl class="prodItem__dl">
+        <dt class="prodItem__dt">프로젝트 종류</dt>
+        <dd class="prodItem__dd">개인 프로젝트</dd>
+      </dl>
+      <dl class="prodItem__dl">
+        <dt class="prodItem__dt">기여도</dt>
+        <dd class="prodItem__dd"><span class="badge">퍼블리싱 100%</span><span class="badge">스크립트 100%</span></dd>
+      </dl>
+      <dl class="prodItem__dl">
+        <dt class="prodItem__dt">특이사항</dt>
+        <dd class="prodItem__dd">접근성 뱃지 취득</dd>
+      </dl>
+      <div class="prodItem__refBox">
+        <a href="javascript:void(0);" class="refIcon refIcon--github"></a>
+      </div>
+    </div>
+    <div class="prodItem__thumb" style="background-image: url(/res/img/product_thumb/smartchoice_screenshot.png)" onclick="openThumbPopup()"></div>
+  </li>
+*/
 
   str += `<li class="prodItem">`;
   str += `  <div class="prodItem__info">`;
@@ -69,7 +88,7 @@ const productFunc = function(obj){
   str += `    </dl>`;
   str += `    </dl>`;
   str += `    <dl class="prodItem__dl">`;
-  str += `      <dt class="prodItem__dt">특이사항</dt>`;
+  str += `      <dt class="prodItem__dt">특징</dt>`;
   str += `      <dd class="prodItem__dd">${obj.comment}</dd>`;
   str += `    </dl>`;
   str += `    <dl class="prodItem__dl">`;
