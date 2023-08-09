@@ -4,7 +4,7 @@ const productObj = [
     duration: "1993.05.16 ~",
     siteLink: "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%9C%A0",
     type: "test",
-    contribution: ["test"],
+    contribution: ["test", "아이유 대존예"],
     special: "test",
     github: [{is: false, link: "javascript:void(0);"}],
     thumbnail: "https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg"
@@ -47,6 +47,11 @@ const productFunc = function(obj){
   str += `      <dt class="prodItem__dt">프로젝트 종류</dt>`;
   str += `      <dd class="prodItem__dd">${obj.type}</dd>`;
   str += `    </dl>`;
+  str += `    </dl>`;
+  str += `    <dl class="prodItem__dl">`;
+  str += `      <dt class="prodItem__dt">특이사항</dt>`;
+  str += `      <dd class="prodItem__dd">${obj.special}</dd>`;
+  str += `    </dl>`;
   str += `    <dl class="prodItem__dl">`;
   str += `      <dt class="prodItem__dt">기여도</dt>`;
   str += `      <dd class="prodItem__dd">`;
@@ -54,11 +59,6 @@ const productFunc = function(obj){
     str += `<span class="badge">${obj.contribution[i]}</span>`
   }
   str += `      </dd>`;
-  str += `    </dl>`;
-  str += `    <dl class="prodItem__dl">`;
-  str += `      <dt class="prodItem__dt">특이사항</dt>`;
-  str += `      <dd class="prodItem__dd">${obj.special}</dd>`;
-  str += `    </dl>`;
   if(obj.github[0].is){
     str += `    <div class="prodItem__refBox">`;
     str += `      <a href="${obj.github[0].link}" title="${obj.title} 깃허브 링크 바로가기" target="_blank" class="refIcon refIcon--github"></a>`;

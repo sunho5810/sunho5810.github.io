@@ -24,7 +24,7 @@ a:hover,a:active,a:focus{text-decoration:none;}
 .blind{overflow:hidden;position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;border:0;padding:0;}
 caption.blind{position:static;}
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1440px){
     html,body{
         font-size:14px;
     }
