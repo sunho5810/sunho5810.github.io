@@ -5,7 +5,7 @@ const productObj = [
     siteLink: "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%9C%A0",
     type: "test",
     contribution: ["test", "아이유 대존예"],
-    special: "test",
+    comment: "test",
     github: [{is: false, link: "javascript:void(0);"}],
     thumbnail: "https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg"
   },
@@ -15,7 +15,7 @@ const productObj = [
     siteLink: "https://www.smartchoice.or.kr/",
     type: "노스글로벌 재직 당시 사이트 PC 디자인 리뉴얼",
     contribution: ["퍼블리싱 100%"],
-    special: "접근성 뱃지 취득",
+    comment: "접근성 뱃지 취득",
     github: [{is: false, link: "javascript:void(0);"}],
     thumbnail: "/res/img/product_thumb/smartchoice_screenshot.png"
   },
@@ -25,10 +25,30 @@ const productObj = [
     siteLink: "https://sunho5810.github.io/avoidPoopGame/",
     type: "개인 프로젝트",
     contribution: ["전체 100%"],
-    special: "Vanilla JS로 제작",
+    comment: "Vanilla JS로 제작",
     github: [{is: true, link: "https://github.com/sunho5810/avoidPoopGame"}],
     thumbnail: "/res/img/product_thumb/avoidPoop_screenshot.png"
-  }
+  },
+  {
+    title: "큐브플립[PC]",
+    duration: "2020.10.20 ~ 2020.10.22",
+    siteLink: "https://sunho5810.github.io/cubeFlip/",
+    type: "개인 프로젝트",
+    contribution: ["전체 100%"],
+    comment: "jquery ui의 mouseenter, mouseleave 이벤트를 이용하여 큐브 플립 구현",
+    github: [{is: true, link: "https://github.com/sunho5810/cubeFlip"}],
+    thumbnail: "/res/img/product_thumb/cubeFlip_screenshot.png"
+  }/* ,
+  {
+    title: "포트폴리오2020[PC]",
+    duration: "2020.10.17 ~ 2020.10.30",
+    siteLink: "https://sunho5810.github.io/cubeFlip/",
+    type: "개인 프로젝트",
+    contribution: ["전체 100%"],
+    comment: "2020년에 제작했던 포트폴리오",
+    github: [{is: true, link: "https://github.com/sunho5810/cubeFlip"}],
+    thumbnail: "/res/img/product_thumb/cubeFlip_screenshot.png"
+  } */
 ]
 
 const productFunc = function(obj){
@@ -50,7 +70,7 @@ const productFunc = function(obj){
   str += `    </dl>`;
   str += `    <dl class="prodItem__dl">`;
   str += `      <dt class="prodItem__dt">특이사항</dt>`;
-  str += `      <dd class="prodItem__dd">${obj.special}</dd>`;
+  str += `      <dd class="prodItem__dd">${obj.comment}</dd>`;
   str += `    </dl>`;
   str += `    <dl class="prodItem__dl">`;
   str += `      <dt class="prodItem__dt">기여도</dt>`;
