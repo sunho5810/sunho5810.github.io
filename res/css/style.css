@@ -3,6 +3,7 @@
   --bg-color: #000;
   --font-color-white: #fff;
   --font-color-black: #000;
+  --font-color-gray: #666;
   --header-height: 80px;
   --inner-sidePadding: 40px;
   --section-bottomPadding: 80px;
@@ -45,16 +46,29 @@ html, body{background-color: var(--bg-color);}
 .sec02 .subTitBox *{color: var(--font-color-white);}
 .subTitBox .inner{height: auto;}
 .productWrap{position: relative; width: 100%; height: 300vh; margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
-.productTumb{position: absolute; top: 0; right: 0; width: 60%; height: calc(100vh - 80px); background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;}
+.productTumb{position: absolute; top: 0; right: 0; width: 50%; height: calc(100vh - 80px); background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;}
 .productTumb.fixed{position: fixed; top: var(--header-height);}
 .productTumb.bottom{position: absolute; top: unset; bottom: 0;}
-.productList{width: 40%;}
-.prodItem{width: 600px; border: 1px solid #fff;}
-.prodItem__dl{display: flex; width: 100%; border-bottom: 1px solid #fff;}
-.prodItem__dt{width: 120px; border-right: 1px solid #fff;}
-.prodItem__dt, .prodItem__dd{padding: 0.5rem 1rem;}
+.productList{display: flex; flex-wrap: wrap; gap: 2rem; width: 48%;}
+.prodItem{overflow: hidden; position: relative; display: flex; justify-content: space-between; flex-direction: column; width: calc(50% - 2rem); background-color: #fff; border-radius: 2rem; box-sizing: border-box;}
+.prodItem *{color: var(--font-color-black);}
+.prodItem__info{padding: 2rem 1rem;}
+
+.prodTitWrap{margin-bottom: 1rem;}
+.prodItem__link{position: relative; color: var(--font-color-black); font-size: 1.5rem; font-weight: bold; line-height: 1;}
+.prodItem__link::after{content :""; position: absolute; top: 50%; left: calc(100% + .5rem); transform: translateY(-50%); width: 24px; height: 24px; background-image: url(/res/img/linkIcon.png); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.uploadDate{margin-top: 0.5rem; font-size: 0.875rem; color: var(--font-color-gray);}
+
+.prodItem__dl{display: flex; gap: 1rem; width: 100%; margin-bottom: 0.5rem; font-size: 0.875rem;}
+.prodItem__dt{position: relative; width: 60px;}
+.prodItem__dt::after{content: ""; position: absolute; top: 50%; left: calc(100% + .2rem); transform: translateY(-50%); width: 1px; height: 0.6rem; background-color: var(--font-color-gray);}
+.prodItem__dt, .prodItem__dd{color: var(--font-color-black)}
+.prodItem__dd .badge{display: inline-block; padding: 0.2rem .5rem; background-color: var(--font-color-gray); color: var(--font-color-white); font-size: 0.75rem; border-radius: 10px; margin-right: 0.3rem;}
+
 .prodItem__btns{display: flex; justify-content: center; align-items: center; gap: 1rem; width: 100%; padding: 0.5rem;}
 .prodItem__btn{padding: 0.5rem 2rem;}
+.prodItem__tumb{overflow: hidden; position: relative; bottom: 0; width: 100%; padding-top: 50%; border-radius: 2rem; background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; cursor: pointer;}
+.prodItem__tumb:hover::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.25); background-image: url(/res/img/thumbDetailIcon.png); background-size: 36px 36px; background-position: center; background-repeat: no-repeat;}
 
 
 @media screen and (max-width: 1200px) {
