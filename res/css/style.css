@@ -4,9 +4,9 @@
   --font-color-white: #fff;
   --font-color-black: #000;
   --font-color-gray: #666;
-  --header-height: 80px;
-  --inner-sidePadding: 40px;
-  --section-bottomPadding: 80px;
+  --header-height: 5rem;
+  --inner-sidePadding: 2.5rem;
+  --section-bottomPadding: 5rem;
 }
 
 body::-webkit-scrollbar {display: none;}
@@ -35,21 +35,20 @@ html, body{background-color: var(--bg-color);}
 .menuBtn__line--02{transform: translateX(-30%);}
 .menuBtn:hover .menuBtn__line--02{transform: translateX(0%); background-color: var(--point-color);}
 
-
 .scrollBar{position: absolute; top: 100%; left: 0; width: 0%; height: 2px; background: var(--point-color);}
 
 .section{width: 100%; height: 100vh; padding-top: var(--header-height); padding-bottom: 80px; box-sizing: border-box;}
 .sec01{background: #000;}
-.sec02{background: #000; height: auto;}
+.sec02{background: #000; height: auto; padding-bottom: 0;}
 .sec03{background: #ddd;}
 
-.sec02 .subTitBox *{color: var(--font-color-white);}
+.subTit{color: var(--font-color-white); font-size: 32px;}
 .subTitBox .inner{height: auto;}
-.productWrap{position: relative; width: 100%; height: 300vh; margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
+.productWrap{position: relative; width: 100%; /* height: 300vh; */ margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
 .productTumb{position: absolute; top: 0; right: 0; width: 50%; height: calc(100vh - 80px); background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;}
 .productTumb.fixed{position: fixed; top: var(--header-height);}
 .productTumb.bottom{position: absolute; top: unset; bottom: 0;}
-.productList{display: flex; flex-wrap: wrap; gap: 2rem; width: 48%;}
+.productList{display: flex; flex-wrap: wrap; gap: 2rem; width: 48%; padding-bottom: var(--section-bottomPadding);}
 .prodItem{overflow: hidden; position: relative; display: flex; justify-content: space-between; flex-direction: column; width: calc(50% - 2rem); min-width: 260px; background-color: #fff; border-radius: 2rem; box-sizing: border-box;}
 .prodItem *{color: var(--font-color-black);}
 .prodItem__info{padding: 2rem 1rem;}
@@ -66,10 +65,14 @@ html, body{background-color: var(--bg-color);}
 .prodItem__dt, .prodItem__dd{color: var(--font-color-black); line-height: 1.6; }
 .prodItem__dd .badge{display: inline-block; padding: 0.2rem .5rem; background-color: var(--font-color-gray); color: var(--font-color-white); font-size: 0.75rem; border-radius: 10px; margin-right: 0.3rem;}
 
-.prodItem__btns{display: flex; justify-content: center; align-items: center; gap: 1rem; width: 100%; padding: 0.5rem;}
-.prodItem__btn{padding: 0.5rem 2rem;}
+/* .prodItem__refBox{display: flex; justify-content: flex-end; align-items: center; gap: 0.3rem; margin-top: 0.5rem;} */
+.prodItem__refBox{display: flex; flex-direction: column; gap: 0.3rem; position: absolute; top: .8rem; right: .8rem;}
+.refIcon{overflow: hidden; width: 2rem; height: 2rem; border-radius: 100%;}
+.refIcon--github{background-image: url(/res/img/githubIcon.png); background-size: cover; background-position: center; background-repeat: no-repeat;}
+
 .prodItem__tumb{overflow: hidden; position: relative; bottom: 0; width: 100%; padding-top: 50%; border-radius: 2rem; background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; cursor: pointer;}
-.prodItem__tumb:hover::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.25); background-image: url(/res/img/thumbDetailIcon.png); background-size: 36px 36px; background-position: center; background-repeat: no-repeat;}
+.prodItem__tumb::before{content: ""; display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.25); background-image: url(/res/img/thumbDetailIcon.png); background-size: 2.25rem 2.25rem; background-position: center; background-repeat: no-repeat;}
+.prodItem__tumb:hover::before{display: block;}
 .closeTumbPopupBtn{display: none;}
 .dim{display: none; position: fixed; top: 0; left: 0; z-index: 100; display: none; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.6);}
 
@@ -82,6 +85,7 @@ html, body{background-color: var(--bg-color);}
   .inner{padding: 0 var(--inner-sidePadding);}
   .productTumb{display: none;}
   .productList{width: 100%;}
+  .prodItem__tumb::before{display: block; top: unset; left: unset; bottom: 1rem; right: 1rem; width: 2.25rem; height: 2.25rem; background-color: transparent;}
   .productTumb.popup{display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 105; width: 80%; height: auto; padding-top: 70%; border-radius: 2rem;}
   .productTumb.popup.on{display: block;}
   .closeTumbPopupBtn{display: flex; justify-content: center; align-items: center; position: absolute; bottom: calc(100% + .2rem); right: 0; width: 1.875rem; height: 1.875rem; background-image: url(/res/img/xIcon.png); background-size: cover; background-position: center; background-repeat: no-repeat;}

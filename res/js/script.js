@@ -82,7 +82,7 @@ const openThumbPopup = function(popIdx){
 }
 
 const closeTumbPopup = function(obj){
-  obj.removeClass("on");
+  $(obj).removeClass("on");
   $(".dim").removeClass("on");
   $("body").removeClass("scrollDisable");
 }
