@@ -122,7 +122,11 @@ const closeNoticePopup = function(obj){
   }, 2000, $("body").removeClass("scrollDisable"));
 }
 
+
+
 $(window).on("scroll", function(){
+  window.scroll({behavior: 'smooth'});
+  
   var scTop = $(window).scrollTop();
   var htmlHeight = $("body").height() - $(window).height();
 
@@ -167,4 +171,9 @@ const closeTumbPopup = function(obj){
   $(obj).removeClass("on");
   $(".dim").removeClass("on");
   $("body").removeClass("scrollDisable");
+}
+
+const goTop = function(){
+  window.scroll({behavior: 'auto'});
+  $('html, body').animate( { scrollTop : 0 }, 400);
 }
