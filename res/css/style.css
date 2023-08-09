@@ -70,7 +70,8 @@ html, body{background-color: var(--bg-color);}
 .prodItem__btn{padding: 0.5rem 2rem;}
 .prodItem__tumb{overflow: hidden; position: relative; bottom: 0; width: 100%; padding-top: 50%; border-radius: 2rem; background-image: url(https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; cursor: pointer;}
 .prodItem__tumb:hover::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.25); background-image: url(/res/img/thumbDetailIcon.png); background-size: 36px 36px; background-position: center; background-repeat: no-repeat;}
-
+.closeTumbPopupBtn{display: none;}
+.dim{display: none; position: fixed; top: 0; left: 0; z-index: 100; display: none; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.6);}
 
 @media screen and (max-width: 1200px) {
   :root{
@@ -81,6 +82,10 @@ html, body{background-color: var(--bg-color);}
   .inner{padding: 0 var(--inner-sidePadding);}
   .productTumb{display: none;}
   .productList{width: 100%;}
+  .productTumb.popup{display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 105; width: 80%; height: auto; padding-top: 70%; border-radius: 2rem;}
+  .productTumb.popup.on{display: block;}
+  .closeTumbPopupBtn{display: flex; justify-content: center; align-items: center; position: absolute; bottom: calc(100% + .2rem); right: 0; width: 1.875rem; height: 1.875rem; background-image: url(/res/img/xIcon.png); background-size: cover; background-position: center; background-repeat: no-repeat;}
+  .dim.on{display: block;}
 }
 
 @media screen and (max-width: 600px) {

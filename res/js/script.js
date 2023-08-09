@@ -1,3 +1,7 @@
+$(function(){
+  windowResizeFunc();
+})
+
 var typingBool = false; 
 var typingIdx = 0; 
 
@@ -44,17 +48,40 @@ $(window).on("scroll", function(){
   var htmlHeight = $("body").height() - $(window).height();
 
   $(".scrollBar").css("width", `${(scTop / htmlHeight) * 100}%`);
-  console.log(`${scTop + $(".header").height()} / ${$(".productWrap").offset().top}`);
+
+  let $productTumb = $(".productTumb").not(".productTumb.popup");
+
   if((scTop + $(".header").height()) >= $(".productWrap").offset().top - $(".header").height()){
-    $(".productTumb").addClass("fixed");
-    $(".productTumb").removeClass("bottom");
+    $productTumb.addClass("fixed");
+    $productTumb.removeClass("bottom");
   } else {
-    $(".productTumb").removeClass("fixed");
-    $(".productTumb").removeClass("bottom");
+    $productTumb.removeClass("fixed");
+    $productTumb.removeClass("bottom");
   }
 
   if(scTop >= $(".sec02").offset().top + ($(".sec02").height() - $(window).height() + $(".header").height())){
-    $(".productTumb").removeClass("fixed");
-    $(".productTumb").addClass("bottom");
+    $productTumb.removeClass("fixed");
+    $productTumb.addClass("bottom");
   }
 });
+
+$(window).on("resize", windowResizeFunc = function(){
+  if($(window).innerWidth() <= 1200){
+    $(".productTumb").addClass("popup");
+  } else {
+    $(".productTumb").removeClass("popup");
+  }
+});
+
+const openThumbPopup = function(popIdx){
+  console.log("openPopup");
+  $(".productTumb.popup").addClass("on");
+  $(".dim").addClass("on");
+  $("body").addClass("scrollDisable");
+}
+
+const closeTumbPopup = function(obj){
+  obj.removeClass("on");
+  $(".dim").removeClass("on");
+  $("body").removeClass("scrollDisable");
+}
