@@ -191,7 +191,7 @@ $(window).on("scroll", function(){
 });
 
 $(window).on("resize", windowResizeFunc = function(){
-  if($(window).innerWidth() <= 1200){
+  if($(window).innerWidth() <= 1440){
     $(".productThumb").addClass("popup");
   } else {
     $(".productThumb").removeClass("popup");
@@ -199,7 +199,7 @@ $(window).on("resize", windowResizeFunc = function(){
 });
 
 const openThumbPopup = function(imgsrc){
-  if($(window).innerWidth() <= 1200){
+  if($(window).innerWidth() <= 1440){
     $(".productThumb.popup").addClass("on");
     $(".productThumb").css("background-image", `url(${imgsrc})`)
     $(".dim").addClass("on");
@@ -218,4 +218,18 @@ const closeTumbPopup = function(obj){
 const goTop = function(){
   window.scroll({behavior: 'auto'});
   $('html, body').animate( { scrollTop : 0 }, 400);
+}
+
+const openContact = function(obj){
+  if(obj.hasClass("on")){
+    obj.removeClass("on");
+    $(".contactWrapper").removeClass("open");
+    $(".contactWrap").fadeOut(200);
+  } else{
+    obj.addClass("on");
+    $(".contactWrapper").addClass("open");
+    setTimeout(() => {
+      $(".contactWrap").fadeIn(400);
+    }, 400);
+  }
 }
