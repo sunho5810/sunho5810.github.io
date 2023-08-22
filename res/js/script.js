@@ -1,16 +1,16 @@
 const productObj = [
+  // {
+  //   title: "아이유 참 좋다",
+  //   duration: "1993.05.16 ~",
+  //   siteLink: "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%9C%A0",
+  //   type: "test",
+  //   contribution: ["test", "아이유 대존예"],
+  //   comment: "test",
+  //   github: [{is: false, link: "javascript:void(0);"}],
+  //   thumbnail: "https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg"
+  // },
   {
-    title: "아이유 참 좋다",
-    duration: "1993.05.16 ~",
-    siteLink: "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%9C%A0",
-    type: "test",
-    contribution: ["test", "아이유 대존예"],
-    comment: "test",
-    github: [{is: false, link: "javascript:void(0);"}],
-    thumbnail: "https://cdn.cashfeed.co.kr/attachments/2cb0a575ee.jpg"
-  },
-  {
-    title: "스마트스토어[PC]",
+    title: "스마트초이스[PC]",
     duration: "2022.10 ~ 2022.12",
     siteLink: "https://www.smartchoice.or.kr/",
     type: "노스글로벌 재직 중 사이트 PC 디자인 리뉴얼",
@@ -35,10 +35,41 @@ const productObj = [
     siteLink: "https://sunho5810.github.io/cubeFlip/",
     type: "개인 프로젝트",
     contribution: ["전체 100%"],
-    comment: "jquery ui의 mouseenter, mouseleave 이벤트를 이용하여 큐브 플립 구현",
+    comment: "jquery ui의 이벤트 함수들을 이용하여 큐브 플립 구현",
     github: [{is: true, link: "https://github.com/sunho5810/cubeFlip"}],
     thumbnail: "/res/img/product_thumb/cubeFlip_screenshot.png"
-  }
+  },
+  {
+    title: "날씨앱[REACT]",
+    duration: "2023.04.11",
+    siteLink: "https://sunho5810.github.io/weather-app-redux/",
+    type: "강의 실습",
+    contribution: ["전체 100%"],
+    comment: "api를 사용해 날씨 정보를 가져오는 실습",
+    github: [{is: true, link: "https://github.com/sunho5810/weather-app-redux"}],
+    thumbnail: "/res/img/product_thumb/weatherApp_screenshot.png"
+  },
+  {
+    title: "H&M[REACT]",
+    duration: "2023.04.05 ~ 2023.04.06",
+    siteLink: "https://sunho5810.github.io/__REACT__hnm-react-router-practice/",
+    type: "강의 실습",
+    contribution: ["전체 100%"],
+    comment: "H&M사이트 제품 검색, api활용 등 사용하여 간략히 구성",
+    github: [{is: true, link: "https://github.com/sunho5810/__REACT__hnm-react-router-practice"}],
+    thumbnail: "https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg"
+  },
+  // {
+  //   title: "넷플릭스[REACT]",
+  //   duration: "2023.04.05 ~ 2023.04.06",
+  //   siteLink: "https://sunho5810.github.io/sunhoflix/",
+  //   type: "강의 실습",
+  //   contribution: ["전체 100%"],
+  //   comment: "영화 정보 api를 활용하여 영화 검색, 장르 구별 등등 기능 구현",
+  //   github: [{is: true, link: "https://github.com/sunho5810/sunhoflix"}],
+  //   thumbnail: "https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg"
+  // },
+
 ]
 
 

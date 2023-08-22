@@ -35,15 +35,15 @@ html, body{background-color: var(--bg-color);}
 .menuBtn__line--02{top: 50%; left: 0; transform: translateX(-30%);}
 .menuBtn__line--03{top: calc(100% - 1px); left: 0;}
 
-
-
 .menuBtn.on{justify-content: center;}
 .menuBtn.on .menuBtn__line--01{width: 130%; top: calc(50% - 1px); transform: rotateZ(45deg);}
 .menuBtn.on .menuBtn__line--02{opacity: 0;}
 .menuBtn.on .menuBtn__line--03{width: 130%; top: calc(50% - 1px); transform: rotateZ(-45deg);}
 
-.contactWrapper{display: none; position: fixed; top: 0; right: 0; width: 48rem; padding-top: 48rem; background: rgba(0, 0, 0, 0.8); border-radius: 100% 0 100% 100%; animation: contactOpen .4s ease;}
+.contactWrapper{display: none; position: fixed; top: 0; right: 0; width: 48rem; padding-top: 48rem; background: rgba(255, 255, 255, 0.8); border-radius: 100% 0 100% 100%; animation: contactOpen .4s ease;}
 .contactWrapper.open{display: block;}
+.contactWrap *{color: var(--color-black);}
+.contact__dd{font-weight: bold;}
 
 @keyframes contactOpen {
   from{
@@ -56,21 +56,26 @@ html, body{background-color: var(--bg-color);}
 
 .contactWrap{display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%;}
 .contactTit{display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; font-size: 2.5rem;}
-.contactTit .profileImg{width: 8.75rem; height: 8.75rem; background-color: #fff; background-image: url(/res/img/profile_img.png); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 100%;}
+.profileImg{width: 10rem; height: 10rem; background-image: url(/res/img/profile_img.png); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 100%;}
+.contactTit .profileImg{width: 8.75rem; height: 8.75rem;}
 .contact__dl{display: flex; width: 100%; margin-bottom: 1rem; font-size: 18px;}
 .contact__dt{width: 30%;}
 .qrCode{display: block; width: 12.5rem; height: 12.5rem; background-color: #fff; background-image: url(/res/img/kakao_qrcode.png); background-size: 90%; background-position: center; background-repeat: no-repeat; border-radius: 1rem;}
 
 .scrollBar{position: absolute; top: 100%; left: 0; width: 0%; height: 2px; background: var(--point-color);}
 
-.section{width: 100%; height: 100vh; padding-top: var(--header-height); padding-bottom: 80px; box-sizing: border-box;}
-.sec01{background: #fff;}
-.sec02{background: #000; height: auto; padding-bottom: 0;}
-.sec03{background: #000;}
+.section{width: 100%; min-height: 100vh; padding-top: var(--header-height); padding-bottom: 80px; box-sizing: border-box; background-color: #000;}
+.sec01{padding-top: calc(var(--header-height) + 3.75rem);}
+.sec02{height: auto; padding-bottom: 0;}
 
 .subTit{color: var(--point-color); font-size: 32px;}
 .subTitBox .inner{height: auto;}
-.productWrap{position: relative; width: 100%; min-height: 240vh; margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
+
+.profileWrapper{display: flex; width: 100%; margin-top: 50px; padding: 2rem; box-sizing: border-box; border: 1px solid var(--color-lightgray);}
+.profileWrap:first-child{padding-right: 1rem; border-right: 1px solid var(--color-lightgray); box-sizing: border-box;}
+.basicProfile__top{display: flex; align-items: center; gap: 2rem;}
+
+.productWrap{position: relative; width: 100%; /* min-height: 240vh; */ margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
 .productThumb{display: flex; justify-content: center; align-items: center; position: absolute; top: 0; right: 0; width: 50%; height: calc(100vh - 80px); background-image: url(); background-color: var(--color-lightgray); background-size: contain; background-position: center; background-repeat: no-repeat;}
 /* .productThumb__img{height: 100%;} */
 .productThumb.fixed{position: fixed; top: var(--header-height);}
