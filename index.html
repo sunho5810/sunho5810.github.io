@@ -1,102 +1,220 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5810 PORTFOLIO</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5810 PORTFOLIO</title>
 
-  <link rel="stylesheet" href="/res/fonts/fonts.css">
-  <link rel="stylesheet" href="/res/css/reset.css">
-  <link rel="stylesheet" href="/res/css/style.css">
+    <link rel="stylesheet" href="/res/fonts/fonts.css" />
+    <link rel="stylesheet" href="/res/css/reset.css" />
+    <link rel="stylesheet" href="/res/css/style.css" />
 
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  <script src="/res/js/script.js"></script>
-</head>
-<body> <!-- class="scrollDisable" -->
-  <div class="introWrapper" style="display: none;">
-    <div class="noticePopup">
-      <p class="noticePopup__p">본 페이지는 개인 포트폴리오 사이트이며, 상업적인 목적이 없음을 밝힙니다.</p>
-      <a href="javascript:closeNoticePopup($('.noticePopup'));" class="noticeCloseBtn btn">확인</a>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/res/js/script.js"></script>
+  </head>
+  <body>
+    <!-- class="scrollDisable" -->
+    <div class="introWrapper" style="display: none">
+      <div class="noticePopup">
+        <p class="noticePopup__p">
+          본 페이지는 개인 포트폴리오 사이트이며, 상업적인 목적이 없음을
+          밝힙니다.
+        </p>
+        <a
+          href="javascript:closeNoticePopup($('.noticePopup'));"
+          class="noticeCloseBtn btn"
+          >확인</a
+        >
+      </div>
+      <div class="ft--player introBox"></div>
     </div>
-    <div class="ft--player introBox"></div>
-  </div>
 
-  <header class="header">
-    <div class="inner inner--header">
-      <h1 class="logo ft--player"><a href="javascript:goTop();" class="logo__link" title="맨 위로 가기">5810</a></h1>
-      <a href="javascript:openContact($('.menuBtn'));" title="메뉴 버튼" class="menuBtn">
-        <span class="menuBtn__line menuBtn__line--01"></span>
-        <span class="menuBtn__line menuBtn__line--02"></span>
-        <span class="menuBtn__line menuBtn__line--03"></span>
-      </a>
-      <div class="contactWrapper">
-        <div class="contactWrap">
-          <div class="contactTit"><div class="profileImg"></div>Contact me!</div>
+    <header class="header">
+      <div class="inner inner--header">
+        <h1 class="logo ft--player">
+          <a href="javascript:goTop();" class="logo__link" title="맨 위로 가기"
+            >5810</a
+          >
+        </h1>
+        <a
+          href="javascript:openContact($('.menuBtn'));"
+          title="메뉴 버튼"
+          class="menuBtn"
+        >
+          <span class="menuBtn__line menuBtn__line--01"></span>
+          <span class="menuBtn__line menuBtn__line--02"></span>
+          <span class="menuBtn__line menuBtn__line--03"></span>
+        </a>
+        <div class="contactWrapper">
+          <div class="contactWrap">
+            <div class="contactTit">
+              <div class="profileImg"></div>
+              Contact me!
+            </div>
 
-          <dl class="contact__dl">
-            <dt class="contact__dt">Phone</dt>
-            <dd class="contact__dd"><a href="tel:01099105810">010-9910-5810</a></dd>
-          </dl>
-          <dl class="contact__dl">
-            <dt class="contact__dt">e-mail</dt>
-            <dd class="contact__dd"><a href="mailto:sunho5515@gmail.com">sunho5515@gmail.com</a></dd>
-          </dl>
-          <dl class="contact__dl">
-            <dt class="contact__dt">kakao</dt>
-            <dd class="contact__dd"><a href="https://open.kakao.com/o/sBdq4Arf" target="_blank" class="qrCode"></a></dd>
-          </dl>
+            <dl class="contact__dl">
+              <dt class="contact__dt">Phone</dt>
+              <dd class="contact__dd">
+                <a href="tel:01099105810">010-9910-5810</a>
+              </dd>
+            </dl>
+            <dl class="contact__dl">
+              <dt class="contact__dt">e-mail</dt>
+              <dd class="contact__dd">
+                <a href="mailto:sunho5515@gmail.com">sunho5515@gmail.com</a>
+              </dd>
+            </dl>
+            <dl class="contact__dl">
+              <dt class="contact__dt">kakao</dt>
+              <dd class="contact__dd">
+                <a
+                  href="https://open.kakao.com/o/sBdq4Arf"
+                  target="_blank"
+                  class="qrCode"
+                ></a>
+              </dd>
+            </dl>
+          </div>
         </div>
       </div>
-    </div>
-    <span class="scrollBar"></span>
-  </header>
+      <span class="scrollBar"></span>
+    </header>
 
-  <div class="wrap">
-    <section class="section sec01">
-      <div class="inner">
-        <div class="subTitBox">
-          <h2 class="subTit">PROFILE</h2>
-        </div>
+    <div class="wrap">
+      <section class="section sec01">
+        <div class="inner">
+          <div class="subTitBox">
+            <h2 class="subTit">PROFILE</h2>
+          </div>
 
-        <div class="profileWrapper">
-          <div class="profileWrap profileWrap--basic">
-            <div class="basicProfile__top">
-              <div class="profileImg"></div>
-              <div class="profile__basicInfo">
-                <dl class="profile__basicInfo__dl">
-                  <dt class="profile__basicInfo__dt">이름</dt>
-                  <dd class="profile__basicInfo__dd">주선호</dd>
-                </dl>
-                <dl class="profile__basicInfo__dl">
-                  <dt class="profile__basicInfo__dt">생년월일</dt>
-                  <dd class="profile__basicInfo__dd">1996-07-28</dd>
-                </dl>
-                <dl class="profile__basicInfo__dl">
-                  <dt class="profile__basicInfo__dt">주소</dt>
-                  <dd class="profile__basicInfo__dd">고양시 일산동구 장항동(이사계획 있음)</dd>
-                </dl>
+          <div class="profileWrapper">
+            <div class="profileWrap profileWrap--basic">
+              <div class="profileBox profileBox--basic">
+                <div class="profileImg"></div>
+                <div class="profile__basicInfo">
+                  <dl class="profile__basicInfo__dl">
+                    <dt class="profile__basicInfo__dt">이름</dt>
+                    <dd class="profile__basicInfo__dd">주선호</dd>
+                  </dl>
+                  <dl class="profile__basicInfo__dl">
+                    <dt class="profile__basicInfo__dt">생년월일</dt>
+                    <dd class="profile__basicInfo__dd">1996-07-28</dd>
+                  </dl>
+                  <dl class="profile__basicInfo__dl">
+                    <dt class="profile__basicInfo__dt">주소</dt>
+                    <dd class="profile__basicInfo__dd">고양시 일산동구 장항동(이사계획 있음)</dd>
+                  </dl>
+                  <dl class="profile__basicInfo__dl">
+                    <dt class="profile__basicInfo__dt">연락처</dt>
+                    <dd class="profile__basicInfo__dd">010-9910-5810</dd>
+                  </dl>
+                  <dl class="profile__basicInfo__dl">
+                    <dt class="profile__basicInfo__dt">이메일</dt>
+                    <dd class="profile__basicInfo__dd">sunho5515@gmail.com</dd>
+                  </dl>
+                  <dl class="profile__basicInfo__dl">
+                    <dt class="profile__basicInfo__dt">카카오톡</dt>
+                    <dd class="profile__basicInfo__dd"><a href="https://open.kakao.com/o/sBdq4Arf" target="_blank" class="qrCode"></a>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="profileWrap profileWrap--info">
+              <p class="profileBox__tit">SKILLS</p>
+              <div class="profileBox profileBox--skills">
+                <ul class="skillList">
+                  <li class="skillList__item">
+                    <img class="skillList__item__img" src="/res/img/html.png" alt="html 로고"></img>
+                    <p class="skillList__item__tit">HTML</p>
+                    <p class="skillList__item__txt">접근성 작업 경험이 있어 시멘틱한 마크업이 가능합니다</p>
+                  </li>
+                  <li class="skillList__item">
+                    <img class="skillList__item__img" src="/res/img/css.png" alt="css 로고"></img>
+                    <p class="skillList__item__tit">CSS</p>
+                    <p class="skillList__item__txt">디자인이 되어있는대로 스타일 작업이 가능합니다</p>
+                  </li>
+                  <li class="skillList__item">
+                    <img class="skillList__item__img" src="/res/img/js.png" alt="js 로고"></img>
+                    <p class="skillList__item__tit">JS</p>
+                    <p class="skillList__item__txt">바닐라, jquery, 각종 플러그인 활용이 가능합니다</p>
+                  </li>
+                  <li class="skillList__item">
+                    <img class="skillList__item__img" src="/res/img/react.png" alt="react 로고"></img>
+                    <p class="skillList__item__tit">REACT</p>
+                    <p class="skillList__item__txt">프론트 개발에 관심이 있어 공부 중 입니다</p>
+                  </li>
+                </ul>
+              </div>
+              <p class="profileBox__tit">EDUCATION</p>
+              <div class="profileBox profileBox--edu">
+                <ul class="eduList">
+                  <li class="eduList__item">
+                    <dl class="eduList__item__dl">
+                      <dt class="eduList__item__dt">한국게임과학고등학교</dt>
+                      <dd class="eduList__item__dd">2013 ~ 2015</dd>
+                    </dl>
+                    <dl class="eduList__item__dl">
+                      <dt class="eduList__item__dt">호서대학교(게임학전공)</dt>
+                      <dd class="eduList__item__dd">2015 ~ 2016(중퇴)</dd>
+                    </dl>
+                    <dl class="eduList__item__dl">
+                      <dt class="eduList__item__dt">디지털웹&앱디자인(UI/UX디자인)과정평가형</dt>
+                      <dd class="eduList__item__dd">2020.07 ~ 2020.11(수료)</dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              <p class="profileBox__tit">CAREER</p>
+              <div class="profileBox profileBox--career">
+                <ul class="careerList">
+                  <li class="careerList__item">
+                    <dl class="careerList__item__dl">
+                      <dt class="careerList__item__dt">TNS컴퍼니</dt>
+                      <dd class="careerList__item__dd">2020.11 ~ 2021.06</dd>
+                      <dd class="careerList__item__dd">워드프레스를 활용한 사이트 제작, 유지보수 작업을 맡았었습니다</dd>
+                    </dl>
+                    <dl class="careerList__item__dl">
+                      <dt class="careerList__item__dt">이비즈빌</dt>
+                      <dd class="careerList__item__dd">2021.06 ~ 2021.08</dd>
+                      <dd class="careerList__item__dd">이벤트 페이지 제작 작업을 맡았었습니다</dd>
+                    </dl>
+                    <dl class="careerList__item__dl">
+                      <dt class="careerList__item__dt">노스글로벌</dt>
+                      <dd class="careerList__item__dd">2022.07 ~ 2023.08</dd>
+                      <dd class="careerList__item__dd">신규사이트 제작, 기존사이트 유지보수 작업을 맡았었습니다</dd>
+                    </dl>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section sec02">
-      <div class="subTitBox">
-        <div class="inner">
-          <h2 class="subTit">PRODUCTS</h2>
+      </section>
+      <section class="section sec02">
+        <div class="subTitBox">
+          <div class="inner">
+            <h2 class="subTit">PRODUCTS</h2>
+          </div>
         </div>
-      </div>
 
-      <div class="productWrap">
-        <ul class="productList"></ul>
-        <div class="productThumb" onclick="closeTumbPopup(this);">
-          <!-- <img src="" alt="" class="productThumb__img"/> -->
-          <a href="javascript:closeTumbPopup($('.productTumb'));" class="closeTumbPopupBtn" title="product 썸네일 팝업 닫기"></a>
+        <div class="productWrap">
+          <ul class="productList"></ul>
+          <div class="productThumb" onclick="closeTumbPopup(this);">
+            <!-- <img src="" alt="" class="productThumb__img"/> -->
+            <a
+              href="javascript:closeTumbPopup($('.productTumb'));"
+              class="closeTumbPopupBtn"
+              title="product 썸네일 팝업 닫기"
+            ></a>
+          </div>
+          <div class="dim"></div>
         </div>
-        <div class="dim"></div>
-      </div>
-    </section>
-  </div>
-</body>
+      </section>
+    </div>
+  </body>
 </html>

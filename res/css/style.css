@@ -36,11 +36,11 @@ html, body{background-color: var(--bg-color);}
 .menuBtn__line--03{top: calc(100% - 1px); left: 0;}
 
 .menuBtn.on{justify-content: center;}
-.menuBtn.on .menuBtn__line--01{width: 130%; top: calc(50% - 1px); transform: rotateZ(45deg);}
+.menuBtn.on .menuBtn__line--01{width: 130%; top: calc(50% - 1px); transform: rotateZ(45deg); background-color: #000;}
 .menuBtn.on .menuBtn__line--02{opacity: 0;}
-.menuBtn.on .menuBtn__line--03{width: 130%; top: calc(50% - 1px); transform: rotateZ(-45deg);}
+.menuBtn.on .menuBtn__line--03{width: 130%; top: calc(50% - 1px); transform: rotateZ(-45deg); background-color: #000;}
 
-.contactWrapper{display: none; position: fixed; top: 0; right: 0; width: 48rem; padding-top: 48rem; background: rgba(255, 255, 255, 0.8); border-radius: 100% 0 100% 100%; animation: contactOpen .4s ease;}
+.contactWrapper{display: none; position: fixed; top: 0; right: 0; width: 48rem; padding-top: 48rem; background: rgba(255, 255, 255, 0.95); border-radius: 100% 0 100% 100%; animation: contactOpen .4s ease;}
 .contactWrapper.open{display: block;}
 .contactWrap *{color: var(--color-black);}
 .contact__dd{font-weight: bold;}
@@ -59,7 +59,8 @@ html, body{background-color: var(--bg-color);}
 .profileImg{width: 10rem; height: 10rem; background-image: url(/res/img/profile_img.png); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 100%;}
 .contactTit .profileImg{width: 8.75rem; height: 8.75rem;}
 .contact__dl{display: flex; width: 100%; margin-bottom: 1rem; font-size: 18px;}
-.contact__dt{width: 30%;}
+.contact__dt{min-width: 7.5rem;}
+.contact__dd{width: calc(100% - 7.5rem);}
 .qrCode{display: block; width: 12.5rem; height: 12.5rem; background-color: #fff; background-image: url(/res/img/kakao_qrcode.png); background-size: 90%; background-position: center; background-repeat: no-repeat; border-radius: 1rem;}
 
 .scrollBar{position: absolute; top: 100%; left: 0; width: 0%; height: 2px; background: var(--point-color);}
@@ -68,12 +69,30 @@ html, body{background-color: var(--bg-color);}
 .sec01{padding-top: calc(var(--header-height) + 3.75rem);}
 .sec02{height: auto; padding-bottom: 0;}
 
-.subTit{color: var(--point-color); font-size: 32px;}
+.subTit{color: var(--point-color); font-size: 2rem;}
 .subTitBox .inner{height: auto;}
 
-.profileWrapper{display: flex; width: 100%; margin-top: 50px; padding: 2rem; box-sizing: border-box; border: 1px solid var(--color-lightgray);}
-.profileWrap:first-child{padding-right: 1rem; border-right: 1px solid var(--color-lightgray); box-sizing: border-box;}
-.basicProfile__top{display: flex; align-items: center; gap: 2rem;}
+.profileWrapper{display: flex; width: 100%; margin-top: 3.125rem; padding: 2rem; box-sizing: border-box; border: 1px solid var(--color-lightgray);}
+.profileWrap--basic{width: 25rem; height: 100%;}
+.profileWrap--info{width: calc(100% - 25rem); padding-left: 2rem; box-sizing: border-box; border-left: 1px solid var(--color-lightgray); box-sizing: border-box;}
+.profileBox{width: 100%; box-sizing: border-box;}
+.profileBox--basic{padding: 2rem; padding-left: 0;}
+.profileBox--skills, .profileBox--edu, .profileBox--career{padding: 2rem; padding-top: 0; border-bottom: 1px solid var(--color-lightgray); box-sizing: border-box;}
+.profileBox--career{border-bottom: none;}
+.profileBox__tit{margin: 1.6rem 0; font-size: 1.25rem; }
+.profileImg{margin: 0 auto;}
+.profile__basicInfo{margin-top: 2rem;}
+.profile__basicInfo__dl{display: flex; gap: 1rem; margin-bottom: 1rem}
+.profile__basicInfo__dt{width: 5rem;}
+.profile__basicInfo__dd{width: calc(100% - 5rem);}
+.skillList__item{display: flex; align-items: center; gap: 2rem; margin-bottom: 1rem;}
+.skillList__item:last-child{margin-bottom: 0;}
+.skillList__item__img{width: 3rem;}
+.skillList__item__tit{width: 3.75rem; text-align: center;}
+
+.eduList__item__dl, .careerList__item__dl{display: flex; gap: 1rem; margin-bottom: 2rem;}
+.eduList__item__dl:last-child, .careerList__item__dl:last-child{margin-bottom: 0;}
+.careerList__item__dt{width: 5rem;}
 
 .productWrap{position: relative; width: 100%; /* min-height: 240vh; */ margin-top: 50px; padding-left: var(--inner-sidePadding); box-sizing: border-box;}
 .productThumb{display: flex; justify-content: center; align-items: center; position: absolute; top: 0; right: 0; width: 50%; height: calc(100vh - 80px); background-image: url(); background-color: var(--color-lightgray); background-size: contain; background-position: center; background-repeat: no-repeat;}
@@ -130,6 +149,14 @@ html, body{background-color: var(--bg-color);}
   .closeTumbPopupBtn{display: flex; justify-content: center; align-items: center; position: absolute; bottom: calc(100% + .2rem); right: 0; width: 1.875rem; height: 1.875rem; background-image: url(/res/img/xIcon.png); background-size: cover; background-position: center; background-repeat: no-repeat;}
 }
 
+@media screen and (max-width: 1200px) {
+  .profileWrapper{display: block;}
+  .profileWrap--basic{width: 100%; /* margin: 0 auto; */}
+  .profileWrap--info{width: 100%; padding-left: 0; border: none; border-top: 1px solid var(--color-lightgray);}
+  .profileBox--basic{padding-right: 0;}
+  .profileImg{margin: 0;}
+}
+
 @media screen and (max-width: 1060px) {
   .prodItem{width: calc(50% - 2rem);}
   .productThumb.popup{padding-top: 70%;}
@@ -140,16 +167,32 @@ html, body{background-color: var(--bg-color);}
   .productList{justify-content: center;}
   .prodItem{width: 100%; min-width: 0;}
   .prodItem__thumb{padding-top: 50%;}
-  .contactWrapper{width: 60%; height: 100vh; padding-top: 0; border-radius: 0;}
+  .contactWrapper{width: 80%; height: 100vh; padding-top: 0; border-radius: 0;}
   .contactWrap{width: calc(100% - (4 * var(--inner-sidePadding))); margin: 0 auto;}
-  .contactTit{justify-content: flex-end; flex-direction: row-reverse; gap: 1rem;}
+  .contactTit{display: block; gap: 1rem;}
+  .skillList__item{flex-direction: column; gap: 0.5rem; margin-bottom: 2rem; text-align: center;}
+  .skillList__item__img{width: 6.25rem;}
+  .eduList__item__dl, .careerList__item__dl{flex-direction: column; gap: 0.5rem;}
 
   @keyframes contactOpen {
     from{
       width: 0;
     }
     to{
-      width: 60%;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .contactWrapper{width: 100%; height: 100vh; padding-top: 0; border-radius: 0;}
+
+  @keyframes contactOpen {
+    from{
+      width: 0;
+    }
+    to{
+      width: 100%;
     }
   }
 }
