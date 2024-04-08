@@ -72,7 +72,7 @@ const productObj = [
   {
     title: "뷰로그",
     duration: "2024.04.05 ~ 2024.04.08",
-    siteLink: "https://sunho5810.github.io/vuelog/index.html",
+    siteLink: "https://sunho5810.github.io/vuelog/",
     type: "강의 실습",
     contribution: ["전체 100%"],
     comment: "코딩에플 vue강의 중 실습 내용",
