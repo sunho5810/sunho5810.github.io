@@ -62,7 +62,7 @@ const productObj = [
   {
     title: "뷰동산",
     duration: "2024.04.01 ~ 2024.04.05",
-    siteLink: "https://sunho5810.github.io/vuedongsan/",
+    siteLink: "https://sunho5810.github.io/vuedongsan/index.html",
     type: "강의 실습",
     contribution: ["전체 100%"],
     comment: "코딩에플 vue강의 중 상품 진열 및 상세페이지 노출 실습",
@@ -70,15 +70,25 @@ const productObj = [
     thumbnail: "https://images.velog.io/images/taese0ng/post/82c7a9ee-7d30-44eb-be74-6814dd66b64c/logo-vuejs-min.png"
   },
   {
-    title: "넷플릭스[REACT]",
-    duration: "2023.04.05 ~ 2023.04.06",
-    siteLink: "https://sunho5810.github.io/sunhoflix/",
+    title: "뷰로그",
+    duration: "2024.04.05 ~ 2024.04.08",
+    siteLink: "https://sunho5810.github.io/vuelog/index.html",
     type: "강의 실습",
     contribution: ["전체 100%"],
-    comment: "영화 정보 api를 활용하여 영화 검색, 장르 구별 등등 기능 구현",
-    github: [{is: true, link: "https://github.com/sunho5810/sunhoflix"}],
-    thumbnail: "https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg"
+    comment: "코딩에플 vue강의 중 실습 내용",
+    github: [{is: true, link: "https://github.com/sunho5810/vuelog"}],
+    thumbnail: "https://images.velog.io/images/taese0ng/post/82c7a9ee-7d30-44eb-be74-6814dd66b64c/logo-vuejs-min.png"
   },
+  // {
+  //   title: "넷플릭스[REACT]",
+  //   duration: "2023.04.05 ~ 2023.04.06",
+  //   siteLink: "https://sunho5810.github.io/sunhoflix/",
+  //   type: "강의 실습",
+  //   contribution: ["전체 100%"],
+  //   comment: "영화 정보 api를 활용하여 영화 검색, 장르 구별 등등 기능 구현",
+  //   github: [{is: true, link: "https://github.com/sunho5810/sunhoflix"}],
+  //   thumbnail: "https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg"
+  // },
 
 ]
 
